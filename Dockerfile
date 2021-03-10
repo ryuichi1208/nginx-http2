@@ -6,3 +6,4 @@ RUN openssl genrsa 2048 > server.key \
 		&& openssl x509 -days 3650 -req -signkey server.key < server.csr > server.crt
 
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY index.html /usr/local/nginx/html/index.html
